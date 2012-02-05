@@ -1,7 +1,4 @@
-.group
-  = f.label :admin_id, t("activerecord.attributes.post.admin_id", :default => "Admin"), :class => :label
-  = f.number_field :admin_id, :class => 'number_field'
-  %span.description Ex: a simple text
+= f.hidden_field( :admin_id, value: current_admin.id )
 .group
   = f.label :title, t("activerecord.attributes.post.title", :default => "Title"), :class => :label
   = f.text_field :title, :class => 'text_field'

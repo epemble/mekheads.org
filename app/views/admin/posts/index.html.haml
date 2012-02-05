@@ -10,19 +10,18 @@
     .inner
       %table.table
         %tr
-          %th.first ID
-          %th
-            = t("activerecord.attributes.admin_post.admin_id", :default => t("activerecord.labels.admin_id", :default => "Admin_id"))
+          %th.first Author
+          %th Title
           %th= t("web-app-theme.created_at", :default => "Created at")
           %th.last &nbsp;
         - @posts.each do |post|
           %tr{:class => cycle("odd", "even")}
             %td
-              = post.id
+              = post.admin.email
             %td
-              = link_to post.admin_id, admin_post_path(post)
+              = link_to post.title, admin_post_path(post)
             %td
-              = post.created_at
+              = post.created_at.strftime "%b. #{post.created_at.day.ordinalize}, %Y at %l:%M %P"
             %td.last
               = link_to "#{t("web-app-theme.show", :default => "Show")}", admin_post_path(post)
               |

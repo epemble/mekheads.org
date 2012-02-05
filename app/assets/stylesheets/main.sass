@@ -34,7 +34,7 @@ body
     width: $site_width
     background-color: lighten($bg_teal, 5%)
     border-bottom: 1px solid darken($bg_teal, 15%)
-    border-top: 1px solid darken($bg_teal, 15%)
+    border-top: 1px solid #555
   text-align: center
   #bar
     display: inline-block
@@ -49,8 +49,7 @@ body
           text-shadow: 0px 1px 0px darken($bg_teal, 15%)
           padding: 8px 1em
           &:hover
-            background-color: lighten($bg_teal, 10%)
-            text-shadow: none
+            background-color: lighten($bg_teal, 15%)
 
 #content
   .box
@@ -66,6 +65,11 @@ body
     &.rebound-rumble
       text-align: center
       padding: 0 1em
+
+  #news
+    .post
+      padding-top: 1em
+      padding-bottom: 1em
 
 
 #footer

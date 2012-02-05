@@ -7,20 +7,12 @@
   .content
     .inner
       %p
-        %b
-          = t("activerecord.attributes.admin_post.admin_id", :default => t("activerecord.labels.admin_id", :default => "Admin"))
-          \:
-        = @post.admin_id
+        %b Author:
+        = @post.admin.email
       %p
-        %b
-          = t("activerecord.attributes.admin_post.title", :default => t("activerecord.labels.title", :default => "Title"))
-          \:
+        %b Title:
         = @post.title
-      %p
-        %b
-          = t("activerecord.attributes.admin_post.body", :default => t("activerecord.labels.body", :default => "Body"))
-          \:
-        = @post.body
+      %p= @post.body
       .wat-cf
         = link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_admin_post_path(@post), :class => "button"
         = link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), admin_post_path(@post), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"

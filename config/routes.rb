@@ -1,11 +1,12 @@
 Frc2012::Application.routes.draw do
   devise_for :admins do
-    get '/login' => 'devise/sessions#new'
-    get '/logout' => 'devise/sessions#destroy'
+    get '/login'  => 'devise/sessions#new',     as: 'new_user_session'
+    get '/logout' => 'devise/sessions#destroy', as: 'destroy_user_session'
   end
 
   namespace :admin do
     resources :posts
+    root to: 'posts#index'
   end
   
   match 'login', to: 'admins#sign_in'
