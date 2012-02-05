@@ -1,0 +1,21 @@
+!!!
+
+%html
+  %head
+    %title mekheads.org
+    = stylesheet_link_tag :main
+    = javascript_include_tag :application
+
+  %body
+    #banner
+      = render partial: '/layouts/banner'
+    
+    #links
+      = render partial: '/layouts/links'
+
+    #content
+      .box
+        .container= yield
+
+    #footer
+      = render partial: '/layouts/footer'

@@ -1,0 +1,8 @@
+%p
+  We are Mekheads Team 1604. We are involved with robotics competitons every year, held by #{link_to 'FIRST', 'http://usfirst.org'}, a non-profit organization. Harmony High School, TECO/Paths, St. Cloud High School, and Gateway High School are all involved with our group. We meet every Thursday from 6-8 in Mr. Berkley's room at TECO. If you are interested in joining our team, please contacts Mrs. Berkley at berkleyj(at)osceola.k12.fl.us.
+= image_tag 'first-transparent.png', width: '20%', height: '20%', class: 'first'
+= image_tag 'rebound-rumble-transparent.png', width: '30%', height: '30%', class: 'rebound-rumble'
+%p This year's game, Rebound Rumble, is here! #{link_to 'Click here', 'http://youtu.be/hK_kzwlki2M'} to see a video of the game.
+
+#news
+  = render partial: 'post', collection: @posts
