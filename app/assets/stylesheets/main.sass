@@ -14,7 +14,11 @@ a
   padding: 0px 3px
 
 body
-  background-color: #444
+  background-image: url(../../assets/background.jpg)
+  background-repeat: no-repeat
+  background-position: top center
+  background-attachment: scroll
+  background-color: #000
   font-family: Arial
 
 .box
@@ -26,8 +30,11 @@ body
 #banner
   .box
     background-color: $bg_teal
-  #logo img
-    display: block
+  #logo
+    a
+      padding: 0
+    img
+      display: block
 
 #links
   .box
@@ -48,7 +55,7 @@ body
           color: white
           text-shadow: 0px 1px 0px darken($bg_teal, 15%)
           padding: 8px 1em
-          &:hover
+          &:hover, &.active
             background-color: lighten($bg_teal, 15%)
 
 #content
@@ -56,20 +63,59 @@ body
     background-color: $bg_main
     border-bottom: 1px solid #666
     padding-bottom: 1em
-    .container
-      padding: 1em 1.75em
-      font-size: 10pt
-      line-height: 1.5
+    font-size: 10pt
+    line-height: 1.5
   img
-    &.first,
+    &.first
+      float: right
+      width: 15%
+      padding: 0 1em 0 2.5em
     &.rebound-rumble
-      text-align: center
-      padding: 0 1em
+      float: right
+      width: 15%
+      display: none
+
+  #introduction
+    font-size: 10pt
+    padding: 1em 1em 0 1em
+    background-color: lighten($bg_teal, 40%)
+    border-bottom: 1px dashed lighten($bg_teal, 20%)
+    p
+      padding-bottom: 1em
 
   #news
+    margin-top: 1.5em
+    font-size: 10pt
     .post
-      padding-top: 1em
-      padding-bottom: 1em
+      padding: 0.75em
+      padding-top: 0
+      &:hover
+        h3.title div.admin
+          display: block
+      
+      h3.title
+        padding: 3px 12px 2px 12px
+        position: relative
+        span.date,
+        span.time
+          opacity: .4
+          font-size: 8pt
+          font-weight: normal
+          padding-left: 1.25em
+          position: relative
+          top: -1px
+        div.admin
+          display: none
+          position: absolute
+          right: 6px
+          top: 6px
+          opacity: .4
+          &.edit
+            &:hover
+              opacity: 1
+            
+      p.body
+        padding: 0px 12px 9px 12px
 
 
 #footer
@@ -84,3 +130,46 @@ body
       font-size: 10pt
       color: #555
       text-shadow: 0px 1px 0px #ccc
+
+
+
+
+
+
+
+
+#sponsors
+  padding: 1em
+
+  p.description
+    font-size: 11pt
+    padding-bottom: 1em
+
+  .sponsor
+    vertical-align: top
+    display: inline-block
+    padding-bottom: 1em
+    padding-right: 1em
+    width: 48%
+    h2
+      font-size: 14pt
+      a
+        padding: 0
+		
+#mentors
+  padding: 1em
+  
+  p.description
+    font-size: 11pt
+    padding-bottom: 1em
+	
+  .mentor
+    vertical-align: top
+    display: inline-block
+    padding-bottom: 1em
+    padding-right: 1em
+    width: 48%
+    h2
+      font-size: 14pt
+
+

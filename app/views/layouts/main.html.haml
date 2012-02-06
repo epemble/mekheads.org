@@ -1,8 +1,8 @@
 !!!
-
 %html
   %head
-    %title mekheads.org
+    %title Mekheads 1604
+    = favicon_link_tag 'assets/favicon.jpg'
     = stylesheet_link_tag :main
     = javascript_include_tag :application
 
@@ -14,8 +14,7 @@
       = render partial: '/layouts/links'
 
     #content
-      .box
-        .container= yield
+      .box= yield
 
     #footer
       = render partial: '/layouts/footer'

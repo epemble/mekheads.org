@@ -1,7 +1,7 @@
 .box
   #bar
     %ol
-      %li= link_to 'The Team', team_path
-      %li= link_to 'Our History', root_path
-      %li= link_to 'Our Mentors', mentors_path
-      %li= link_to 'Our Sponsors', sponsors_path
+      %li= link_to 'The Team', team_path, class: ('active' if current_page?(action: 'team'))
+      %li= link_to 'Our History', root_path, class: ('active' if current_page?(action: 'history'))
+      %li= link_to 'Our Mentors', mentors_path, class: ('active' if current_page?(action: 'mentors'))
+      %li= link_to 'Our Sponsors', sponsors_path, class: ('active' if current_page?(action: 'sponsors'))
