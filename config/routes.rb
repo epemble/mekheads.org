@@ -11,9 +11,16 @@ Frc2012::Application.routes.draw do
   
   match 'login', to: 'admins#sign_in'
 
-  match 'sponsors', to: 'home#sponsors'
-  match 'mentors',  to: 'home#mentors'
-  match 'team',     to: 'home#team'
+  match 'sponsors',    to: 'home#sponsors'
+  match 'mentors',     to: 'home#mentors'
+  match 'team',        to: 'home#team'
+  match 'aboutsite',   to: 'home#aboutsite'
+  match 'mechanical',  to: 'home#mechanical'
+  match 'electrical',  to: 'home#electrical'
+  match 'programming', to: 'home#programming'
+  match 'marketing',   to: 'home#marketing'
+  match 'webdesign',   to: 'home#webdesign'
+  match 'robot',       to: 'home#robot'
   
   root to: 'home#index'
 

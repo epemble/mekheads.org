@@ -16,5 +16,32 @@ class HomeController < ApplicationController
   def team
     render 'home/team'
   end
+  
+  def aboutsite
+    render 'home/aboutsite'
+  end
 
+  def mechanical
+    render 'home/mechanical'
+  end
+  
+  def electrical
+    render 'home/electrical'
+  end
+  
+  def marketing
+    render 'home/marketing'
+  end
+  
+  def programming
+    render 'home/programming'
+  end
+  
+  def webdesign
+    render 'home/webdesign'
+  end
+
+  def robot
+    render 'home/robot'
+  end
 end

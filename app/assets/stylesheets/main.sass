@@ -2,6 +2,14 @@ $site_width: 800px
 $bg_main: #fcfcfa
 $bg_teal: #329edc
 
+h2.subteam
+  font-size: 14pt
+  text-align: center
+
+h1.subteam
+  font-size: 24pt
+  text-align: center
+
 *
   padding: 0
   margin: 0
@@ -20,6 +28,12 @@ body
   background-attachment: scroll
   background-color: #000
   font-family: Arial
+  
+.centeredImage
+  text-align: center
+  margin-top: 0px
+  margin-bottom: 0px
+  padding: 0px
 
 .box
   width: $site_width
@@ -69,12 +83,11 @@ body
     &.first
       float: right
       width: 15%
-      padding: 0 1em 0 2.5em
     &.rebound-rumble
       float: right
-      width: 15%
-      display: none
-
+      width: 20%
+    &.firstandrr
+      float: right
   #introduction
     font-size: 10pt
     padding: 1em 1em 0 1em
@@ -171,5 +184,50 @@ body
     width: 48%
     h2
       font-size: 14pt
+      a
+        padding: 0
 
+#team
+  padding: 1em
+  
+  p.description
+    font-size: 11pt
+    padding-bottom: 1em
 
+  .subteam
+    vertical-align: top
+    display: inline-block
+    padding-bottom: 1em
+    padding-right: 1em
+    width: 48%
+    h2
+      font-size: 14pt
+      a
+        padding: 0
+
+#subteams
+  padding: 1em
+  
+  p.description
+    font-size: 11pt
+    padding-bottom: 1em
+  
+  p.teamlead
+    font-size: 11pt
+    padding-bottom: 1em
+    text-align: center
+
+  .member
+    vertical-align: top
+    display: inline-block
+    padding-bottom: 1em
+    padding-right: 1em
+    width: 100%
+    text-align: center
+
+  .teamlead
+    vertical-align: top
+    display: inline-block
+    padding-bottom: 1em
+    padding-right: 1em
+    width: 100%
