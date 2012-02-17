@@ -4,4 +4,4 @@
     -# %span.time= post.created_at.strftime '%l:%M %P'
     %span.date= post.created_at.strftime "%b. #{post.created_at.day.ordinalize}, %Y"
     .admin.edit= link_to image_tag('icon-gear.png'), admin_post_path(post)
-  %p.body= post.body
+  %p.body= post.body_html
